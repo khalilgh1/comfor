@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/roomsStyle.css">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/453f9f9c65.js" crossorigin="anonymous"></script>
+    <script src="scripts/roomScript.js" defer></script>
+    <!-- swiper links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h2>COMFOR</h2>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="home">HOME</a>
+            <a href="rooms.html" class="rooms">ROOMS</a>
+            <a href="jobs.html" class="rooms">JOBS</a>
+            <a href="about.html" class="about">ABOUT US</a>
+        </nav>
+        <buttton class="bars" onclick="displayBar()">
+            <i class="fa-solid fa-bars"></i>
+        </buttton>
+    </header>
+
+    <section>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h3>Standard Queen Room</h3>
+                    <div class="container">
+                        <img src="images/queen.jpg" alt="">
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="price">$150/night</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Deluxe King Room</h3>
+                    <div class="container">
+                        <img src="images/king.jpeg" alt="">
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+
+                    </div>
+                    <h3 class="price">$250/night</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Ocean View Room</h3>
+                    <div class="container">
+                        <img src="images/ocean.jpg" alt="">
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="price">$275/night</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Garden View Room</h3>
+                    <div class="container">
+                        <img src="images/garden.png" alt="">
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+
+                    </div>
+                    <h3 class="price">$300/night</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Presidential Suite</h3>
+                <div class="container">
+                    <img src="images/president.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="price">$500/night</h3>
+            </div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

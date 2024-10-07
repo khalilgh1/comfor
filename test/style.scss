@@ -1,0 +1,24 @@
+$myColor: blue;
+$h1Size: 4rem;
+$H3color:rgb(8, 244, 122);
+@mixin flex-center($dir){
+    flex-direction: $dir;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    font-size: $h1Size;
+    color: $myColor;
+    font-style: italic;
+}
+.rest {
+    @include flex-center();
+    h3 {
+        font-size: 2rem;
+        color: $H3color;
+    }
+}

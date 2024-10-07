@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+body {
+  background-image: url("background.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsla(0, 0%, 0%, 0.15);
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  margin: 0;
+}
+header .logo {
+  margin-right: 54%;
+  margin-left: 10px;
+  height: 60px;
+  width: 140px;
+  padding: 5px;
+  animation: slide-right 1s;
+}
+header a {
+  text-decoration: none;
+}
+header a h2 {
+  font-family: "BebasNeue", sans-serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: bold;
+  color: hsl(137, 50%, 42%);
+  text-shadow: 2px 2px 4px black;
+}
+header a h2:hover {
+  transition: ease-in-out 0.25s;
+  cursor: pointer;
+}
+header nav {
+  animation: slide-down 1s;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+}
+header nav a:hover {
+  color: hsl(137, 41%, 31%);
+  transition: ease-in-out 0.25s;
+}
+header .bars {
+  position: absolute;
+  display: none;
+  right: 10px;
+  font-size: 2em;
+  padding: 10px;
+  color: white;
+}
+header .bars:hover {
+  cursor: pointer;
+  color: hsl(137, 41%, 31%);
+  transition: ease-in-out 0.25s;
+}
+
+section {
+  position: relative;
+  justify-self: center;
+  height: 89vh;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  z-index: 1;
+}
+section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section h1 {
+  font-size: 3rem;
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  max-width: 900px;
+  animation: fade 1s;
+}
+section span {
+  font-size: 3.1rem;
+  color: hsl(0, 82%, 19%);
+  text-shadow: none;
+  -webkit-text-stroke: 1px rgb(43, 13, 13);
+  animation: glow 1.5s infinite alternate;
+  font-family: Verdana, sans-serif;
+}
+section button {
+  font-size: 2rem;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: hsl(137, 41%, 31%);
+  color: white;
+  cursor: pointer;
+  animation: fade 1s;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px black;
+}
+section button:hover {
+  background-color: hsl(137, 50%, 42%);
+  transition: ease-in-out 0.25s;
+}
+section .reserveMenu {
+  position: absolute;
+  display: none;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  color: white;
+  background-color: hsla(0, 16%, 6%, 0.7);
+  animation: fade 0.5s;
+}
+section .reserveMenu * {
+  margin: 5px;
+}
+section .reserveMenu select {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+section .reserveMenu select:hover {
+  background-color: #e1e1e1;
+}
+section .reserveMenu select:focus {
+  background-color: #fff;
+}
+section .reserveMenu label {
+  font-size: 1.2rem;
+  color: white;
+}
+section .reserveMenu input {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+section .reserveMenu button {
+  font-size: 1.2rem;
+  text-shadow: none;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("BebasNeue-Regular.ttf");
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes glow {
+  from {
+    color: hsl(137, 41%, 31%);
+  }
+  to {
+    color: hsl(137, 50%, 42%);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Small devices*//*# sourceMappingURL=style.css.map */

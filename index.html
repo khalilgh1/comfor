@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js" defer></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/453f9f9c65.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href="index.html">
+             <h2>COMFOR</h2>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="home">HOME</a>
+            <a href="rooms.html" class="rooms">ROOMS</a>
+            <a href="jobs.html" class="rooms">JOBS</a>
+            <a href="about.html" class="about">ABOUT US</a>
+        </nav>
+        <buttton class="bars" onclick="displayBar()">
+            <i class="fa-solid fa-bars"></i>
+        </buttton>
+        
+    </header>
+    <section>
+        <div class="wrapper">
+            <h1 class="title">
+                Greetings Traveler, <span>COMFOR</span> is the right place for comfort
+            </h1>
+            <button onclick="displayMenu()" id="openBtn">Reserve NOW!</button>
+        </div>
+        <div class="reserveMenu" id="menu">
+            <h2>Please select you suite choice </h2>
+            <select title="Room Type">
+                <option>Standard Queen Room</option>
+                <option>Deluxe King Room</option>
+                <option>Ocean View Room</option>
+                <option>Garden View Room</option>
+                <option>Presidential Suite</option>
+            </select>
+            <label for="persons">number of persons</label>
+            <input type="number" id="persons" placeholder="Enter number of persons">
+            <h2 id="total"></h2>
+            <button type="button" onclick="reserve(
+                document.querySelector('select').value,
+                document.querySelector('input').value
+            )">reserve</button>
+        </div>
+        
+    </section>
+
+</body>
+</html>

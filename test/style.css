@@ -1,0 +1,20 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  color: blue;
+  font-style: italic;
+}
+
+.rest {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rest h3 {
+  font-size: 2rem;
+  color: rgb(8, 244, 122);
+}/*# sourceMappingURL=style.css.map */

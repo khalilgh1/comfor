@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+}
+html , body{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url('background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.150);
+    margin: 0;
+}
+header .logo {
+    margin-right: 54%;
+    margin-left: 10px;
+    height: 60px;
+    width: 140px;
+    padding: 5px;
+    animation: slide-right 1s;
+}
+
+header a{
+    text-decoration: none;
+}
+header a h2 {
+    font-family: 'BebasNeue' , sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: bold;
+    color: hsl(137, 50%, 42%);
+    text-shadow: 2px 2px 4px black;
+}
+
+header a h2:hover {
+    
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+header nav{
+    animation: slide-down 1s;
+}
+header nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header nav a:hover {
+    color: hsl(137, 41%, 31%);
+    transition: ease-in-out 0.3s;
+}
+header .bars{
+    position: absolute;
+    display: none;
+    right: 10px;
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+}
+header .bars:hover{
+    cursor: pointer;
+    color: hsl(137, 41%, 31%);
+    transition: ease-in-out 0.25s;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 0; /* Add this line to remove the space */
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.150);
+}
+
+/* swiper style */
+.swiper{
+    position: relative;
+    display: flex;
+    justify-content: center ; /* Center the swiper-slide within the swiper */
+    align-items: center ;
+    height: 85%;
+    width: 350px ; /*Increase the width to make the swiper space wider*/
+    border-bottom: 2px solid hsl(138, 52%, 14%);
+    border-radius: 20px;
+    animation: pop-fade 1s;
+}
+.swiper-slide{
+    position: relative; /* Change position to relative */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    z-index: 1;
+    background-color: rgb(22, 18, 18);
+    border: 2px solid hsl(138, 52%, 14%);
+    border-radius: 20px;
+}
+.swiper-slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background-color:hsl(137, 41%, 31%);
+    clip-path: circle(55% at 0 0);
+    z-index: -1;
+}
+.swiper-slide h3{
+    color: white;
+    margin: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+.swiper-slide .container{
+    position: relative;
+    left: 35px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 70%;
+    border: 2px solid hsl(138, 52%, 14%);
+    border-radius: 50%;
+    margin: 15px;
+    margin-bottom: 30px;
+}
+
+.swiper-slide .container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.swiper-slide .stars{
+    display: flex;
+    justify-content: center;
+}
+.swiper-slide .price{
+    position: relative;
+    left: 20px;
+    text-align: right;
+    width: 85%;
+}
+.fa-solid.fa-star , .fa-solid.fa-star-half{
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('BebasNeue-Regular.ttf');
+}
+@keyframes grow {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+@keyframes slide-down {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes slide-right{
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes glow {
+    from {
+        color: hsl(137, 41%, 31%);
+    }
+
+    to {
+        color: hsl(137, 50%, 42%);
+    }
+}
+@keyframes pop-fade {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@media (max-width: 1150px) {
+
+    header .logo {
+        margin-right: 40%;
+    }
+    header nav{
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media only screen  and (max-width: 900px) {
+        header .logo {
+            margin-right: auto;
+            height: 55px;
+            width: 130px;
+        }
+        header{
+            position: relative;
+        }
+        header a h2 {
+            font-size: 2.8rem;
+        }
+        header nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: hsl(137, 59%, 24%);
+            width: 100%;
+            height: 100vh;
+            transition: all 0.75s;
+            z-index: 1001;
+        }
+        header nav a {
+            font-size: 1.5rem;
+            padding: 15px;
+            margin: 5px;
+        }
+        header .bars{
+            display: block;
+        }
+}
+
+@media (max-width: 600px) {
+    header .logo {
+        margin-right: 20%;
+    }
+    header nav a {
+        font-size: 1.5rem;
+    }
+    header .bars {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+}

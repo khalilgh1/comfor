@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jobs.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/453f9f9c65.js" crossorigin="anonymous"></script>
+    <script src="scripts/jobs.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href="index.html">
+             <h2>COMFOR</h2>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="home">HOME</a>
+            <a href="rooms.html" class="rooms">ROOMS</a>
+            <a href="jobs.html" class="rooms">JOBS</a>
+            <a href="about.html" class="about">ABOUT US</a>
+        </nav>
+        <buttton class="bars" onclick="displayBar()">
+            <i class="fa-solid fa-bars"></i>
+        </buttton>
+    </header>
+    <section>
+        <div class="wrapper">
+            <h1>Available Jobs</h1>
+            <div class="reception">
+                <div class="title">
+                    <h2>Front Desk Receptionist</h2>
+                </div>
+                <div class="rest">
+                    <div class="label">
+                        <h3>Job Type: Full-Time</h3>
+                        <h3>Location: Main Hotel Lobby</h3>
+                        <h3 class="salary">$18/hour</h3>
+                        <button onclick="display('Front Desk Receptionist')">apply</button>
+                    </div>
+                    <div class="image">
+                        <img src="images/reception.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="housekeeping">
+                <div class="title">
+                    <h2>Housekeeping Staff</h2>
+                </div>
+                <div class="rest">
+                    <div class="label">
+                        <h3>Job Type: Part-Time</h3>
+                        <h3>Location: Guest Rooms & Suites</h3>
+                        <h3 class="salary">$16/hour</h3>
+                        <button onclick="display('Housekeeping Staff')">apply</button>
+                    </div>
+                    <div class="image">
+                        <img src="images/house.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="manager">
+                <div class="title">
+                    <h2>Restaurant Manager</h2>
+                </div>
+                <div class="rest">
+                    <div class="label">
+                        <h3>Job Type: Full-Time</h3>
+                        <h3>Location: On-Site Restaurant</h3>
+                        <h3 class="salary">$50,000/year</h3>
+                        <button onclick="display('Housekeeping Staff')">apply</button>
+                    </div>
+                    <div class="image">
+                        <img src="images/manager.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

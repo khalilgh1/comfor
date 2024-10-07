@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsla(0, 0%, 0%, 0.150);
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.150);
+}
+
+header .logo {
+    margin-right: 54%;
+    margin-left: 10px;
+    height: 60px;
+    width: 140px;
+    padding: 5px;
+    animation: slide-right 1s;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a h2 {
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    color: hsl(137, 50%, 42%);
+}
+
+header a h2:hover {
+
+    transition: ease-in-out 0.25s;
+    cursor: pointer;
+}
+
+header nav {
+    animation: slide-down 1s;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header nav a:hover {
+    color: hsl(137, 41%, 31%);
+    transition: ease-in-out 0.25s;
+}
+
+header .bars {
+    position: absolute;
+    display: none;
+    right: 10px;
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+}
+
+header .bars:hover {
+    cursor: pointer;
+    color: hsl(137, 41%, 31%);
+    transition: ease-in-out 0.25s;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.150);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: hsla(0, 0%, 0%, 0.150);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 4px 4px 8px black;
+    margin: 40px;
+    background-color: hsla(0, 16%, 6%, 0.7);
+    animation: slide-right 1s;
+    height: 72vh;
+    width: 350px;
+}
+
+.contact * {
+    margin: 5px;
+    animation: fade 1.75s;
+}
+
+.contact h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: hsl(137, 50%, 42%);
+    text-shadow: 2px 2px 4px black;
+}
+
+.contact p {
+    font-size: 1.3rem;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 4px black;
+}
+
+.contact h2 {
+    text-align: left;
+    font-size: 2rem;
+    color: hsl(137, 50%, 42%);
+    text-shadow: 2px 2px 4px black;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 72vh;
+    width: 350px;
+    animation: slide-left 1s;
+}
+
+.location iframe {
+    border: 2px solid hsl(0, 0%, 23%);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px black;
+    height: 72vh;
+    width: 350px;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('BebasNeue-Regular.ttf');
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1150px) {
+
+    header .logo {
+        margin-right: 40%;
+    }
+
+    header nav {
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header .logo {
+        margin-right: auto;
+        height: 55px;
+        width: 130px;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header a h2 {
+        font-size: 2.8rem;
+    }
+
+    header nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: hsl(137, 59%, 24%);
+        width: 100%;
+        height: 100vh;
+        transition: all 0.75s;
+        z-index: 1001;
+    }
+
+    header nav a {
+        font-size: 1.5rem;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    header .bars {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    html,
+    body {
+        overflow: auto;
+    }
+
+    .contact {
+        margin: 10px;
+        padding: 10px;
+        height: 40%;
+    }
+    .location{
+        height: 40%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:350px) {
+
+    .location,
+    .contact {
+        width: 90%;
+        overflow: auto;
+        height: 55vh;
+    }
+
+    .contact * {
+        max-width: 95%;
+        text-align: center;
+    }
+}
